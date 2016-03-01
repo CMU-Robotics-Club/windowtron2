@@ -38,7 +38,7 @@
       m = checkTime(m);
       s = checkTime(s);
       document.getElementById('clock').innerHTML =
-      h + ":" + m + ":" + s;
+      "<h2>" + h + ":" + m + "</h2>";
       var t = setTimeout(startTime, 500);
     }
     function checkTime(i) {
@@ -46,6 +46,7 @@
           return i;
     }
   </script>
+  
 </head>
 
 <body onload="startTime()">
@@ -60,8 +61,8 @@
         </script>
       </div>
       <div class='window'>
-        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=360&amp;wkst=1&amp;bgcolor=%23333333&amp;src=85bf0h78fidsgkkgmkktrqasm8%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York"
-        style="border-width:0" width="480" height="360" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=240&amp;wkst=1&amp;bgcolor=%23333333&amp;src=85bf0h78fidsgkkgmkktrqasm8%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York"
+        style="border-width:0" width="320" height="240" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
     <div class='middle'>
@@ -75,7 +76,7 @@
         </script>
       </div>
       <div class='longWindow'>
-        <iframe id="forecast_embed" type="text/html" frameborder="0" height="250"
+        <iframe id="forecast_embed" type="text/html" frameborder="0" height="200"
          width="100%" src="http://forecast.io/embed/#lat=40.4440&lon=-79.9422&name=Pittsburgh&color=#00aaff&font=Georgia&units=us"></iframe>
       </div>
     </div>
@@ -86,7 +87,7 @@
       <div class='window'>
         <script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');
         </script><script type="text/javascript">(function() {var params = {rssmikle_url: "http://feeds.bbci.co.uk/news/world/rss.xml?edition=uk#",
-        rssmikle_frame_width: "480",rssmikle_frame_height: "360",frame_height_by_article: "0",rssmikle_target: "_blank",
+        rssmikle_frame_width: "320",rssmikle_frame_height: "240",frame_height_by_article: "0",rssmikle_target: "_blank",
         rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",
         rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "off",autoscroll: "on",
         scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "Off",rssmikle_title: "on",rssmikle_title_sentence: "World News",
@@ -100,6 +101,10 @@
       </div>
       <div class='window' id='announcements'>
         <h1>Announcements</h1>
+	<p>Officer Elections: 3/17. Applications due by 3/6.</p>
+	<p>Make sure any personal projects are labeled!</p>
+	<p>Windowtron2.0 is best Windowtron.</p>
+        <p>We have a TV now.</p>
       </div>
     </div>
   </div>

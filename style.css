@@ -7,45 +7,48 @@ body {
 
 .windowSpace {
   background-color: #101010;
-  width: 1920px;
-  height: 1080px;
-  display: flex;
+  width: 1280px;
+  height: 720px;
+  display: block;
 }
 
 .left{
   flex: 0 0 25%;
+  float: left;
 }
 
 .middle{
-  flex: 1 0;
+  float: left;
 }
 
 .right{
-  flex: 1;
+  float:left;
 }
 
 #webcam {
-  max-width: 960px;
+  max-width: 640px;
 }
 
 #shop{
-  width: 480px;
+  width: 320px;
 }
 
 .bigWindow {
-  width: 960px;
-  height: 768px;
+  width: 640px;
+  height: 512px;
+  position: relative;
 }
 
 .longWindow {
-  width: 960px;
-  height: 250px;
+  width: 640px;
+  height: 213px;
+  margin-top: -40px;
   background-color: #FFFFFF;
 }
 
 .window{
-  width: auto;
-  height: 360px;
+  width: 320px;
+  height: 240px;
   background-color: #989797;
 }
 
@@ -55,8 +58,8 @@ iframe{
 }
 
 .title {
-  height: 62px;
-  width: 960px;
+  height: 41px;
+  width: 640px;
   background-color: #CDCDCD;
 }
 
@@ -66,15 +69,32 @@ iframe{
 
 h1 {
   font-family: 'Raleway', sans-serif;
-  padding-top: 8px;
-  padding-left: 5px;
+  padding-top: 5px;
+  padding-left: 4px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-#clock {
-  background-color: #FFFFFF;
-  font-size: 130px;
-  line-height: 2;
+p {
   font-family: 'Raleway', sans-serif;
+  padding-left: 7px;
+  font-size: 13px;
 }
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  margin-left: auto;
+  margin-tight: auto;
+  font-size: 120px;
+  padding-top: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+
+#clock{
+  background-color: #FFFFFF;
+}
+
+

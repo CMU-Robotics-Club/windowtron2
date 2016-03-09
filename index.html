@@ -14,9 +14,9 @@
     function updateWindowView()
     {
       if(windowView.complete) {
-          document.getElementById("webcam").src = windowView.src;
-          windowView = new Image();
-          windowView.src = "http://www.contrib.andrew.cmu.edu/~ar99/weather/weather.jpg?t=" + new Date().getTime();;
+          wc = document.getElementByID("webcam");
+          wc.src = windowView.src;
+          windowView.src = "http://www.contrib.andrew.cmu.edu/~ar99/weather/weather.jpg?t=" + new Date().getTime();
       }
       setTimeout(updateWindowView, 1000);
     }
@@ -25,7 +25,7 @@
       if(shopView.complete) {
           document.getElementById("shop").src = shopView.src;
           shopView = new Image();
-          shopView.src = "https://www.roboticsclub.org/shop1.jpg?t=" + new Date().getTime();;
+          shopView.src = "https://www.roboticsclub.org/shop1.jpg?t=" + new Date().getTime();
       }
       setTimeout(updateShopView, 1000);
     }

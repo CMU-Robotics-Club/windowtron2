@@ -23,6 +23,7 @@
       }
       setTimeout(updateWindowView, 1000);
     }
+
     function updateShopView()
     {
       if(shopView.complete) {
@@ -31,6 +32,12 @@
           shopView.src = "https://www.roboticsclub.org/shop1.jpg?t=" + new Date().getTime();
       }
       setTimeout(updateShopView, 1000);
+    }
+
+    function refresh()
+    {
+        location.reload();
+        setTimeout(refresh, 600000);
     }
 
     function startTime() {

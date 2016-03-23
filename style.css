@@ -13,7 +13,6 @@ body {
 }
 
 .left{
-  flex: 0 0 25%;
   float: left;
 }
 
@@ -26,7 +25,7 @@ body {
 }
 
 #webcam {
-  max-width: 640px;
+  max-width: 100%;
 }
 
 #shop{
@@ -35,19 +34,29 @@ body {
 
 .bigWindow {
   width: 640px;
-  height: 512px;
+  height: auto;
   position: relative;
 }
 
-.longWindow {
+#weather {
   width: 640px;
   height: 213px;
   margin-top: -40px;
   background-color: #FFFFFF;
 }
 
+.longWindow {
+  width: 640px;
+  height: 213px;
+  background-color: #FFFFFF;
+}
+
 .window{
-  width: 320px;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  float: left;
+  width: 50%;
   height: 240px;
   background-color: #989797;
 }
@@ -96,5 +105,3 @@ h2 {
 #clock{
   background-color: #FFFFFF;
 }
-
-

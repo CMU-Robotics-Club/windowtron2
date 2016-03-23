@@ -62,21 +62,7 @@
 <body onload="startTime()">
   <div class='windowSpace'>
     <div class='left'>
-      <div class='window' id='clock'>
-      </div>
-      <div class='window'>
-        <img id="shop">
-        <script type="text/javascript">
-          updateShopView()
-        </script>
-      </div>
-      <div class='window'>
-        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=240&amp;wkst=1&amp;bgcolor=%23333333&amp;src=85bf0h78fidsgkkgmkktrqasm8%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York"
-        style="border-width:0" width="320" height="240" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
-    <div class='middle'>
-      <div class="title">
+      <div class='title'>
         <h1>Carnegie Mellon University Robotics Club</h1>
       </div>
       <div class='bigWindow'>
@@ -85,36 +71,22 @@
           updateWindowView()
         </script>
       </div>
-      <div class='longWindow'>
+      <div class='longWindow' id='weather'>
         <iframe id="forecast_embed" type="text/html" frameborder="0" height="200"
          width="100%" src="http://forecast.io/embed/#lat=40.4440&lon=-79.9422&name=Pittsburgh&color=#00aaff&font=Georgia&units=us"></iframe>
       </div>
     </div>
-    <div class='right'>
+    <div class='middle'>
       <div class='window'>
-        <iframe src="http://pitlivebus.com/"></iframe>
-      </div>
-      <div class='window'>
-        <script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');
-        </script><script type="text/javascript">(function() {var params = {rssmikle_url: "http://feeds.bbci.co.uk/news/world/rss.xml?edition=uk#",
-        rssmikle_frame_width: "320",rssmikle_frame_height: "240",frame_height_by_article: "0",rssmikle_target: "_blank",
-        rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",
-        rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "off",autoscroll: "on",
-        scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "Off",rssmikle_title: "on",rssmikle_title_sentence: "World News",
-        rssmikle_title_link: "",rssmikle_title_bgcolor: "#0066FF",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",
-        rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#0066FF",
-        rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "150",
-        rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M %p",
-        item_description_style: "text+tn",item_thumbnail: "full",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",
-        keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script><div style="font-size:10px; text-align:center; width:480px;">
+        <div id='clock'>
         </div>
       </div>
-      <div class='window' id='announcements'>
-        <h1>Announcements</h1>
-	<p>Officer Elections: 3/17. Applications due by 3/6.</p>
-	<p>Make sure any personal projects are labeled!</p>
-	<p>Windowtron2.0 is best Windowtron.</p>
-        <p>We have a TV now.</p>
+      <div class='window'>
+        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=240&amp;wkst=1&amp;bgcolor=%23333333&amp;src=85bf0h78fidsgkkgmkktrqasm8%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York"
+        style="border-width:0" width="320" height="240" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class='bigWindow'>
+        <iframe src="http://pitlivebus.com/"></iframe>
       </div>
     </div>
   </div>

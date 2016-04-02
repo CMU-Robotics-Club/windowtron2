@@ -5,39 +5,25 @@
 <html>
 <head>
   <title>Windowtron 2.0</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
 
   <script type="text/javascript">
     var windowView = new Image();
-    var shopView = new Image();
     windowView.src = "http://www.contrib.andrew.cmu.edu/~ar99/weather/weather.jpg";
-    shopView.src = "https://www.roboticsclub.org/shop1.jpg";
-
+    
     function updateWindowView()
     {
       if(windowView.complete) {
-          wc = document.getElementByID("webcam");
+          wc = document.getElementById("webcam");
           wc.src = windowView.src;
           windowView.src = "http://www.contrib.andrew.cmu.edu/~ar99/weather/weather.jpg?t=" + new Date().getTime();
       }
       setTimeout(updateWindowView, 1000);
-    }
-
-    function updateShopView()
-    {
-      if(shopView.complete) {
-          document.getElementById("shop").src = shopView.src;
-          shopView = new Image();
-          shopView.src = "https://www.roboticsclub.org/shop1.jpg?t=" + new Date().getTime();
-      }
-      setTimeout(updateShopView, 1000);
-    }
-
-    function refresh()
-    {
-        location.reload();
-        setTimeout(refresh, 600000);
     }
 
     function startTime() {
@@ -55,38 +41,50 @@
           if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
           return i;
     }
+
+    function refresh() {
+      location.reload();
+    }
+
+    function init() {
+      startTime();
+      setTimeout(refresh,3600000);
+    }
   </script>
 
 </head>
 
-<body onload="startTime()">
-  <div class='windowSpace'>
-    <div class='left'>
-      <div class='title'>
-        <h1>Carnegie Mellon University Robotics Club</h1>
+<body onload="init()">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+	<div class="row">
+          <h1>Carnegie Mellon University Robotics Club</h1>
+	</div>
+	<div class="row">
+          <img id="webcam">
+          <script type="text/javascript">
+            updateWindowView()
+          </script>
+	</div>
+	<div class="row" id='weather'>
+          <iframe id="forecast_embed" type="text/html" frameborder="0" height="100%"
+		  width="100%" src="http://forecast.io/embed/#lat=40.4440&lon=-79.9422&name=Pittsburgh&color=#00aaff&font=Georgia&units=us"></iframe>
+	</div>
       </div>
-      <div class='bigWindow'>
-        <img id="webcam">
-        <script type="text/javascript">
-          updateWindowView()
-        </script>
-      </div>
-      <div class='longWindow' id='weather'>
-        <iframe id="forecast_embed" type="text/html" frameborder="0" height="200"
-         width="100%" src="http://forecast.io/embed/#lat=40.4440&lon=-79.9422&name=Pittsburgh&color=#00aaff&font=Georgia&units=us"></iframe>
-      </div>
-    </div>
-    <div class='middle'>
-      <div class='window'>
-        <div id='clock'>
-        </div>
-      </div>
-      <div class='window'>
-        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=240&amp;wkst=1&amp;bgcolor=%23333333&amp;src=85bf0h78fidsgkkgmkktrqasm8%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York"
-        style="border-width:0" width="320" height="240" frameborder="0" scrolling="no"></iframe>
-      </div>
-      <div class='bigWindow'>
-        <iframe src="http://pitlivebus.com/"></iframe>
+      <div class="col-md-6">
+	<div class="row">
+	  <div class="col-md-6">
+            <div id='clock'></div>
+	  </div>
+	  <div class="col-md-6">
+            <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=240&amp;wkst=1&amp;bgcolor=%23333333&amp;src=85bf0h78fidsgkkgmkktrqasm8%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York"
+		    style="border-width:0" width="100%" height="240px;" frameborder="0" scrolling="no" id="cal"></iframe>
+	  </div>
+	</div>
+	<div class="row">
+          <iframe src="http://pitlivebus.com/" id="bus"></iframe>
+	</div>
       </div>
     </div>
   </div>
